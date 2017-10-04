@@ -27,52 +27,8 @@ tna = raw_input("The Traffic(tna) IP address: ")
 
 enbid = '3000' + str(int(file_name[-1:]) + 60)
 print enbid
-#path = '/repo/eravarm/stp_cfg/ln/rbslnvtf2-ms11'
-
-#shutil.copytree('/home/eravarm/Desktop/auto/rbslnvtf2-ms11', '/home/eravarm/Desktop/auto/'+file_name)
-
-#shutil.copy('/home/eravarm/Desktop/auto/rbslnvtf2-ms11.cfg', '/home/eravarm/Desktop/auto/'+full_name)
-
-for filename in os.listdir("/home/eravarm/Desktop/auto/"):
-	if filename.endswith('rbslnvtf2-ms11.cfg'):
-        	print(filename)
-		shutil.copy('/home/eravarm/Desktop/auto/rbslnvtf2-ms11.cfg', '/home/eravarm/Desktop/auto/'+full_name)
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+full_name, inplace=1)):
-    			sys.stdout.write(line.replace('RBSLNVTF2-MS11', name_upper))
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+full_name, inplace=1)):
-    			sys.stdout.write(line.replace('rbslnvtf2-ms11', file_name))
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+full_name, inplace=1)):
-    			sys.stdout.write(line.replace('2011', port))
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+full_name, inplace=1)):
-    			sys.stdout.write(line.replace('132.196.43.150', lmt))
 
 
-for filename in os.listdir("/home/eravarm/Desktop/auto/rbslnvtf2-ms11/beans/"):
-	if filename.endswith('rbslnvtf2-ms11.xml'):
-        
-        	print(filename)
-		shutil.copy('/home/eravarm/Desktop/auto/rbslnvtf2-ms11/beans/rbslnvtf2-ms11.xml', '/home/eravarm/Desktop/auto/'+xml_name)
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+xml_name, inplace=1)):
-    			sys.stdout.write(line.replace('RBSLNVTF2-MS11', name_upper))
-
-for filename in os.listdir("/home/eravarm/Desktop/auto/rbslnvtf2-ms11/beans/"):
-	if filename.endswith('rbslnvtf2-ms11_cells.xml'):
-        
-        	print(filename)
-		shutil.copy('/home/eravarm/Desktop/auto/rbslnvtf2-ms11/beans/rbslnvtf2-ms11_cells.xml', '/home/eravarm/Desktop/auto/'+cells_xml_name)
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+cells_xml_name, inplace=1)):
-    			sys.stdout.write(line.replace('RBSLNVTF2-MS11', name_upper))
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+cells_xml_name, inplace=1)):
-    			sys.stdout.write(line.replace('75', cells_xml_value))
-
-for filename in os.listdir("/home/eravarm/Desktop/auto/rbslnvtf2-ms11/netconf/config_1_ru_1_sector/"):
-	if filename.endswith('RBSNC_2_basic_fru_netconf_create_common.xml'):
-        
-        	print(filename)
-		shutil.copy('/home/eravarm/Desktop/auto/rbslnvtf2-ms11/netconf/config_1_ru_1_sector/RBSNC_2_basic_fru_netconf_create_common.xml', '/home/eravarm/Desktop/auto/'+'RBSNC_2_basic_fru_netconf_create_common.xml')
-		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+'RBSNC_2_basic_fru_netconf_create_common.xml', inplace=1)):
-			
-    			sys.stdout.write(line.replace('RBSLNVTF2-MS11', name_upper))
 
 		for i, line in enumerate(fileinput.input('/home/eravarm/Desktop/auto/'+'RBSNC_2_basic_fru_netconf_create_common.xml', inplace=1)):
 			
